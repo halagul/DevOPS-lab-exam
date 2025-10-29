@@ -22,3 +22,5 @@ EXPOSE 3000
 
 # Step 8: Command to run your app
 CMD ["node", "app.js"]
+
+//this is the new changes i made for pull command
