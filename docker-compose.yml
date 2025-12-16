@@ -1,0 +1,37 @@
+# version: '3.8'
+
+# services:
+#   backend:
+#     build: ./final-lab-backend
+#     ports:
+#       - "4000:4000"
+#     networks:
+#       - finalnet
+
+#   frontend:
+#     build: ./final-lab-frontend
+#     ports:
+#       - "3000:3000"
+#     depends_on:
+#       - backend
+#     networks:
+#       - finalnet
+
+# networks:
+#   finalnet:
+#     driver: bridge
+
+
+version: "3.9"
+services:
+  frontend:
+    build: ./final-lab-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./final-lab-backend
+    ports:
+      - "4000:4000"
